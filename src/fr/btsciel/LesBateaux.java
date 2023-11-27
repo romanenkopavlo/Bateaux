@@ -58,9 +58,18 @@ public class LesBateaux {
         Bateau_A_Moteur moteur1 = (Bateau_A_Moteur) bateau4;
         Bateau_A_Helice helice1 = (Bateau_A_Helice) bateau5;
 
+        for (Bateau b : lesBateaux) {
+            if (b.getClass().getSimpleName().equals("Bateau")) {
+                System.out.println(YELLOW + "Bateau -> " + "\t\t\t\t" + b.getCoque() + "\t" + b.getLongueur() + " m" + "\t\t" + b.getLargeur() + " m" + RESET);
+            };
+            if (b.getClass().getSimpleName().equals("Barque")) {
+//                System.out.println(GREEN + "Barque -> " + "\t\t\t\t" + barque1.getCoque() + "\t\t" + barque1.getLongueur() + " m" + "\t\t" + b.getLargeur() + " m" + "\t" + b.getRame() + " rames" + RESET);
+            }
+        }
+
         System.out.println("Les bateaux: ");
-        System.out.println(YELLOW + "Bateau -> " + "\t\t\t\t" + bateau1.getCoque() + "\t" + bateau1.getLongueur() + " m" + "\t\t" + bateau1.getLargeur() + " m" + RESET);
-        System.out.println(GREEN + "Barque -> " + "\t\t\t\t" + barque1.getCoque() + "\t\t" + barque1.getLongueur() + " m" + "\t\t" + barque1.getLargeur() + " m" + "\t" + barque1.getRame() + " rames" + RESET);
+
+
         System.out.println(RED + "Bateau a voile -> " + "\t\t" + voile1.getCoque() + "\t\t" + voile1.getLongueur() + " m" + "\t\t" + voile1.getLargeur() + " m" + "\t" + voile1.getMats() + " mats" + "\t\t" + voile1.getVoiles() + " voiles" + RESET);
         System.out.println(BLUE + "Bateau a moteur -> " + "\t\t" + moteur1.getCoque() + "\t" + moteur1.getLongueur() + " m" + "\t\t" + moteur1.getLargeur() + " m" + "\t" + moteur1.getNombreDeMoteurs() + " moteurs" + "\t" + moteur1.getPuissance() + " CV" + RESET);
         System.out.print(PURPLE + "Bateau a helice -> " + "\t\t" + helice1.getCoque() + "\t\t" + helice1.getLongueur() + " m" + "\t\t" + helice1.getLargeur() + " m" + "\t" + helice1.getNombreDeMoteurs() + " moteurs" + "\t" + helice1.getPuissance() + " CV" + "\t\t" + helice1.getTirant_D_Eau() + " m de tirant d'eau" + RESET);
